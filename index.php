@@ -25,11 +25,7 @@ try {
 # root
 $app->get('/', function() use($app) {
     Auth::redirect_not_logged($app);
-    $api = new MetroApi();
-    $railways = $api->get_cache_railways_to_stations();
     $app->render('share/_header.php');
-    $app->render('entry.php', array('image' => Con::image('test.jpg')));
-    $app->render('json/_railways.php', array('railways' => $railways));
     $app->render('share/_footer.php');
 });
 
