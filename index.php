@@ -24,9 +24,8 @@ try {
 
 # root
 $app->get('/', function() use($app) {
-    Auth::redirect_not_logged($app);
-    $app->render('share/_header.php');
-    $app->render('share/_footer.php');
+//    Auth::redirect_not_logged($app);
+    echo 'Hello World';
 });
 
 # GET /login
